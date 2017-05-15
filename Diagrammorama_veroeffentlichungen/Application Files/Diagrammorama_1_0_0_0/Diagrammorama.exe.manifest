@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Diagrammorama.exe" version="1.0.0.0" publicKeyToken="5807c2bf3bcd6881" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Diagrammorama" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Diagrammorama.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC-Manifestoptionen
+          Wenn Sie die Zugangsebene für das Windows-Benutzerkonto ändern möchten, ersetzen Sie den 
+          requestedExecutionLevel-Knoten durch eines der folgenden Elemente.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Löschen Sie den requestedExecutionLevel-Knoten, wenn Sie 
+         zum Gewährleisten der Abwärtskompatibilität die Datei- und Registrierungsvirtualisierung verwenden möchten.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Diagrammorama.exe" size="12760">
+      <assemblyIdentity name="Diagrammorama" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>1EcwEf3buU8OiBLQF4UWS7jm6CAbhdCcbc6uLZmp2gw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OxyPlot.dll" size="508928">
+      <assemblyIdentity name="OxyPlot" version="1.0.0.0" publicKeyToken="638079A8F0BD61E9" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LTEs3mfU7PYAKYFIdC3zAt8vfU0XmmWpMR8pZ//cJi4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OxyPlot.WindowsForms.dll" size="24064">
+      <assemblyIdentity name="OxyPlot.WindowsForms" version="1.0.0.0" publicKeyToken="245EACD6B5D2D338" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>F2+q0fVZ8hglf/eXoCY6rGC+Kj86y6HXHoCp3H3H8As=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OxyPlot.Xamarin.Forms.dll" size="7680">
+      <assemblyIdentity name="OxyPlot.Xamarin.Forms" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5ZjihiopAL9mmhFH054XIt9y9lC4yYvEdVWg9sIn8X8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xamarin.Forms.Core.dll" size="529464">
+      <assemblyIdentity name="Xamarin.Forms.Core" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>GlKiL8tLn7CgRKaTJ03kaKPHnsCWoc2NIsqJ4Y3tEjw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xamarin.Forms.Platform.dll" size="12352">
+      <assemblyIdentity name="Xamarin.Forms.Platform" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>OBQwUGTOVegVnhjsmmiblGkoclEt99YezmFej7c29SQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Xamarin.Forms.Xaml.dll" size="76344">
+      <assemblyIdentity name="Xamarin.Forms.Xaml" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kp/EGdHzbPmNWixr8yPLqeJ/slZZm2obk2qkRSffs7Q=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Diagrammorama.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-AV8S959\Ich" issuerKeyHash="fee3ee224e96378b35b7ca09551fda06caaf22f3" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>u10j0i3FFtZUdN/gnVUvaOwg1nz9dlSYB7mKe7NS1dw=</DigestValue></Reference></SignedInfo><SignatureValue>RvsWL8H5JSuMiJrKAlgVKVkUZinTm5uDFpcdsa/Ls/y02aTJQ3I1CHjNkxQEx6RgSnVkL1ckv6f+QtHfAsuj4zUliCHXaNhUBJEqkYKYkHa0qhlaYe36L4z41HlrXrgfy3PwIqEWycUTUNmAuCEklleSM1CDAztC4gifEEWu9Y4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>nGGhWH0ri4PkGQcOjTO051CIcfmUQDs70ljJsXsNG1GH9PiC3q5Gt/Ky5aecvqJI2Sk9KOR+GyMM3ofXOuzab1VHlcGm5x2KwJPXENKeOfzlyof6j0pTp8WlkD8lQK9y1SmbWlnaioZpGSqOgsNIuWiSvUAuyq6b3REvLMY32+0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="dcd552b37b8ab907985476fd7cd620ec682f559de0df7454d616c52dd2235dbb" Description="" Url=""><as:assemblyIdentity name="Diagrammorama.exe" version="1.0.0.0" publicKeyToken="5807c2bf3bcd6881" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-AV8S959\Ich</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>BJYHp5GxmPdmOY2JlQ41AUAJOd6A/L6arKFQMumYVu8=</DigestValue></Reference></SignedInfo><SignatureValue>PT1McgUlfmsQKiow6UoQG4dP4QBhQMxB6xfS/ToW64kUzs32+NZ1yXkC+ql/+/BDzC0KVoD69+5gSD2jAI+irrQi0c4yIc8Q+xaEgQ+Oqpcu4a4fr1URjL923/udbfwx/Zt6kcTmEDG2pfvYT8OlTtSHzj/jZ43zbBeIaxM9UJY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>nGGhWH0ri4PkGQcOjTO051CIcfmUQDs70ljJsXsNG1GH9PiC3q5Gt/Ky5aecvqJI2Sk9KOR+GyMM3ofXOuzab1VHlcGm5x2KwJPXENKeOfzlyof6j0pTp8WlkD8lQK9y1SmbWlnaioZpGSqOgsNIuWiSvUAuyq6b3REvLMY32+0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQbolXqnrdwL5JzwGzZW6nJTANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDHiYARABFAFMASwBUAE8AUAAtAEEAVgA4AFMAOQA1ADkAXABJAGMAaDAeFw0xNzA0MTMxNDQ2MzVaFw0xODA0MTMyMDQ2MzVaMDExLzAtBgNVBAMeJgBEAEUAUwBLAFQATwBQAC0AQQBWADgAUwA5ADUAOQBcAEkAYwBoMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCcYaFYfSuLg+QZBw6NM7TnUIhx+ZRAOzvSWMmxew0bUYf0+ILerka38rLlp5y+okjZKT0o5H4bIwzeh9c67NpvVUeVwabnHYrAk9cQ0p45/OXKh/qPSlOnxaWQPyVAr3LVKZtaWdqKhmkZKo6Cw0i5aJK9QC7KrpvdES8sxjfb7QIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAHBLl3icdKYtAe+7LtmharoxYot7WU3xHEn/4qEjX/zys+0WU2x+khYenNHfALzlC9vQQrEAP4Sg7Vi1PrO4ohRhHb/p5mcl/sXDz72aSTUX+Q75nB2irD7mIdDPTy5InKoHYfgO0RC5R7HSo5GbGFYDiilOJgxtt4gR5u6jI+dz</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
