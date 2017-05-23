@@ -10,7 +10,7 @@ namespace Diagrammorama
 {
     public class ChartySheen : Chart
     {
-        public Chart CharlesCharteten = new Chart();
+        public Chart CharlesCharteten;
         public string X_Achse;
         public List<string> Y_Achse=new List<string>();
         public DataTable Tabelle;
@@ -33,6 +33,7 @@ namespace Diagrammorama
         }
         public Chart HerrGraph()
         {
+            CharlesCharteten = new Chart();
             DataTable Tabellerich = Tabelle;
             CharlesCharteten.DataSource = Tabellerich;
 
