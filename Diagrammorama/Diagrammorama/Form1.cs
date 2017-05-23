@@ -22,10 +22,10 @@ namespace Diagrammorama
         private ChartySheen Charty;
         private PRN_Reader PRN;
         private Diagramm dg;
+        private Oxy o;
         public Form1()
         {
             InitializeComponent();
-            
         }
 
         private void Datei_Click(object sender, EventArgs e)
@@ -100,6 +100,9 @@ namespace Diagrammorama
             Charty.Legende = graph;
             dg = new Diagramm(Charty);
             dg.Show();
+            o = new Oxy(Charty);
+            o.Show();
+            
         }
 
         private void GraphNeu_Click(object sender, EventArgs e)

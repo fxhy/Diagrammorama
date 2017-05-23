@@ -94,3 +94,4 @@ C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\bin\
 C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.exe.manifest
 C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.application
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.Oxy.resources
