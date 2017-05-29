@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Diagrammorama
 {
-    public class ChartySheen : Chart
+    public class ChartySheen
     {
         public Chart CharlesCharteten = new Chart();
         public string X_Achse;
