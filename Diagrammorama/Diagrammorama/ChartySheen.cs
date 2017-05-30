@@ -5,11 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Data;
+using OxyPlot;
+using OxyPlot.Axes;
+using OxyPlot.Series;
+using OxyPlot.WindowsForms;
 
 namespace Diagrammorama
 {
     public class ChartySheen
     {
+        /*private PlotModel CharlesCharteten=new PlotModel;
+        */
+        public string WhatsMyName;
+        public string sub;
+
         public Chart CharlesCharteten = new Chart();
         public string X_Achse;
         public List<string> Y_Achse=new List<string>();
@@ -34,6 +43,30 @@ namespace Diagrammorama
         public Chart HerrGraph()
         {
             DataTable Tabellerich = Tabelle;
+            /*LinearAxis AxelX = new LinearAxis();
+        AxelX.Position = AxisPosition.Bottom;
+        CharlesCharteten.Axes.Add(AxelX);
+        LinearAxis AxelY = new LinearAxis();
+        CharlesCharteten.Axes.Add(AxelY);
+        ScatterSeries Scotty = new ScatterSeries();
+        scatterSeries1.Points.Add(new ScatterPoint(0.667469348137951, 0.701595088793707));
+        for (int i = 0; i < Tabellerich.Columns.Count; i++)
+            {
+                string serieName = Tabellerich.Columns[i].ColumnName;
+                if ((Y_Achse.Contains(serieName)) & (serieName != X_Achse))
+                {
+                    CharlesCharteten.Series.Add(serieName);
+                    CharlesCharteten.Series[serieName].ChartType = SeriesChartType.FastLine;
+                    for (int row = 1; row < Tabellerich.Rows.Count; row++)
+                    {
+                        CharlesCharteten.Series[serieName].Points.AddXY
+                            (Tabellerich.Rows[row][X_Achse], Tabellerich.Rows[row][serieName]);
+                    }
+                }
+            }
+            return CharlesCharteten;
+        plotModel1.Series.Add(scatterSeries1);
+        return plotModel1;*/
             CharlesCharteten.DataSource = Tabellerich;
 
             for (int i = 0; i < Tabellerich.Columns.Count; i++)
