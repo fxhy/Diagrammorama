@@ -10,24 +10,30 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Windows.Forms.DataVisualization.Charting;
+using OxyPlot;
+using OxyPlot.Axes;
+using OxyPlot.Series;
+using OxyPlot.WindowsForms;
 
 namespace Diagrammorama
 {
     public partial class Diagramm : Form
     {
+        private PlotModel Diagramme = new PlotModel();
         private ChartySheen ChartyChart;
         public Diagramm(ChartySheen mchart)
         {
-            InitializeComponent();
+            this.InitializeComponent();
             ChartyChart = mchart;
             ChartyChart.HerrGraph();
             Diagramme = ChartyChart.CharlesCharteten;
+            this.plot1.Model = Diagramme;
         }
 
         private void Diagramm_Load(object sender, EventArgs e)
         {
         }
-        public void Graph()
+       /* public void Graph()
         {
             DataTable tab = ChartyChart.Tabelle;
             Diagramme.DataSource = tab;
@@ -46,11 +52,11 @@ namespace Diagrammorama
                     }
                 }
             }
-        }
+        }*/
 
         private void Speichern_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
+           /* SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
             sfd.Title = "Diagramm Speichern";
             sfd.ShowDialog();
@@ -68,12 +74,12 @@ namespace Diagrammorama
                     case 3:
                         Diagramme.SaveImage(fs, ChartImageFormat.Gif);
                         break;
-                    /*case 4:
+                    case 4:
                         Diagramme.SaveImage(fs, ChartImageFormat.svg);
-                        break;*/
+                        break;
                 }
                 fs.Close();
-            }
+            }*/
         }
     }
 }
