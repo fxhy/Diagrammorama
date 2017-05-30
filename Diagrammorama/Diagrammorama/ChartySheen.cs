@@ -48,23 +48,25 @@ namespace Diagrammorama
         CharlesCharteten.Axes.Add(AxelX);
         LinearAxis AxelY = new LinearAxis();
         CharlesCharteten.Axes.Add(AxelY);
-        ScatterSeries Scotty = new ScatterSeries();
-        //scatterSeries1.Points.Add(new ScatterPoint(0.667469348137951, 0.701595088793707));
+            List<DataPointSeries> Scotty = new List<DataPointSeries>();
+            int found = 0;
         for (int i = 0; i < Tabellerich.Columns.Count; i++)
             {
                 string serieName = Tabellerich.Columns[i].ColumnName;
                 if ((Y_Achse.Contains(serieName)) & (serieName != X_Achse))
                 {
-                    
+                    Scotty.Add(new LineSeries());
+                    Scotty[found].Title = serieName;
                     //CharlesCharteten.Series.Add(serieName);
                     //CharlesCharteten.Series[serieName].ChartType = SeriesChartType.FastLine;
                     for (int row = 1; row < Tabellerich.Rows.Count; row++)
                     {
-                        Scotty.Points.Add(new ScatterPoint(Convert.ToDouble(Tabellerich.Rows[row][X_Achse]), Convert.ToDouble(Tabellerich.Rows[row][serieName])));
+                        Scotty[found].Points.Add(new OxyPlot.DataPoint(Convert.ToDouble(Tabellerich.Rows[row][X_Achse]), Convert.ToDouble(Tabellerich.Rows[row][serieName])));
                         //CharlesCharteten.Series[serieName].Points.AddXY
-                          //  (Tabellerich.Rows[row][X_Achse], Tabellerich.Rows[row][serieName]);
+                        //  (Tabellerich.Rows[row][X_Achse], Tabellerich.Rows[row][serieName]);
                     }
-                    CharlesCharteten.Series.Add(Scotty);
+                    CharlesCharteten.Series.Add(Scotty[found]);
+                    found++;
                 }
             }
             return CharlesCharteten;

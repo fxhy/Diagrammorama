@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Speichern = new System.Windows.Forms.Button();
+            this.plot1 = new OxyPlot.WindowsForms.PlotView();
             this.SuspendLayout();
             // 
             // Speichern
@@ -40,6 +41,15 @@
             this.Speichern.Text = "Speichern";
             this.Speichern.UseVisualStyleBackColor = true;
             this.Speichern.Click += new System.EventHandler(this.Speichern_Click);
+            // 
+            // plot1
+            // 
+            this.plot1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plot1.Location = new System.Drawing.Point(0, 0);
+            this.plot1.Margin = new System.Windows.Forms.Padding(0);
+            this.plot1.Name = "plot1";
+            this.plot1.Size = new System.Drawing.Size(632, 446);
+            this.plot1.TabIndex = 0;
             // 
             // Diagramm
             // 

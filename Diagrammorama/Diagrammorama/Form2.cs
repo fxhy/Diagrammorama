@@ -21,11 +21,11 @@ namespace Diagrammorama
     {
         private PlotModel Diagramme = new PlotModel();
         private ChartySheen ChartyChart;
-        public Diagramm(ChartySheen mchart)
+        public Diagramm(ChartySheen ChartyChart)
         {
             this.InitializeComponent();
-            ChartyChart = mchart;
             ChartyChart.HerrGraph();
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             Diagramme = ChartyChart.CharlesCharteten;
             this.plot1.Model = Diagramme;
         }

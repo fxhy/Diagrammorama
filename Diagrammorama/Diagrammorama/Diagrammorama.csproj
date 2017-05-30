@@ -101,9 +101,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChartySheen.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="AttributeVonPanem.cs" />
+    <Compile Include="ChartySheen.cs" />
+    <Compile Include="ExportoPatronum.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
