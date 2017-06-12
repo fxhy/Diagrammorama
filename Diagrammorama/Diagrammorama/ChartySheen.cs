@@ -44,28 +44,43 @@ namespace Diagrammorama
         {
             DataTable Tabellerich = Tabelle;
             LinearAxis AxelX = new LinearAxis();
-        AxelX.Position = AxisPosition.Bottom;
-        CharlesCharteten.Axes.Add(AxelX);
-        LinearAxis AxelY = new LinearAxis();
-        CharlesCharteten.Axes.Add(AxelY);
+            AxelX.Position = AxisPosition.Bottom;
+            CharlesCharteten.Axes.Add(AxelX);
+            LinearAxis AxelY = new LinearAxis();
+            CharlesCharteten.Axes.Add(AxelY);
+
             List<DataPointSeries> Scotty = new List<DataPointSeries>();
             int found = 0;
+            bool line = false;
         for (int i = 0; i < Tabellerich.Columns.Count; i++)
             {
                 string serieName = Tabellerich.Columns[i].ColumnName;
-                if ((Y_Achse.Contains(serieName)) & (serieName != X_Achse))
+                if ((Y_Achse.Contains(serieName)) && (serieName != X_Achse) && !(line))
                 {
-                    Scotty.Add(new LineSeries());
-                    Scotty[found].Title = serieName;
-                    //CharlesCharteten.Series.Add(serieName);
+                    ScatterSeries RoundScotty = new ScatterSeries();
+                    RoundScotty.Title = serieName;
+                    RoundScotty.ItemsSource = Tabellerich.AsEnumerable();
+                    RoundScotty.DataFieldX = X_Achse;
+                    RoundScotty.DataFieldY = serieName;
+                    /*CharlesCharteten.Series.Add(serieName);
                     //CharlesCharteten.Series[serieName].ChartType = SeriesChartType.FastLine;
                     for (int row = 1; row < Tabellerich.Rows.Count; row++)
                     {
                         Scotty[found].Points.Add(new OxyPlot.DataPoint(Convert.ToDouble(Tabellerich.Rows[row][X_Achse]), Convert.ToDouble(Tabellerich.Rows[row][serieName])));
                         //CharlesCharteten.Series[serieName].Points.AddXY
                         //  (Tabellerich.Rows[row][X_Achse], Tabellerich.Rows[row][serieName]);
-                    }
-                    CharlesCharteten.Series.Add(Scotty[found]);
+                    }*/
+                    CharlesCharteten.Series.Add(RoundScotty);
+                    found++;
+                }
+                else if ((Y_Achse.Contains(serieName)) && (serieName != X_Achse) && (line))
+                {
+                    LineSeries SkinnyScotty = new LineSeries();
+                    SkinnyScotty.Title = serieName;
+                    SkinnyScotty.ItemsSource = Tabellerich.AsEnumerable();
+                    SkinnyScotty.DataFieldX = X_Achse;
+                    SkinnyScotty.DataFieldY = serieName;
+                    CharlesCharteten.Series.Add(SkinnyScotty);
                     found++;
                 }
             }
