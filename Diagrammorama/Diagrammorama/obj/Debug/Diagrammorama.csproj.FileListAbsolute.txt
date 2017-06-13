@@ -91,3 +91,11 @@ C:\Users\Ich\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.X
 C:\Users\Ich\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\Ich\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.exe.manifest
 C:\Users\Ich\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.application
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Diagrammorama.exe.config
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.exe
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.pdb
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.csprojResolveAssemblyReference.cache
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.Form1.resources
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.Diagramm.resources
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.Properties.Resources.resources
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.csproj.GenerateResource.Cache

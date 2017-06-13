@@ -21,8 +21,9 @@ namespace Diagrammorama
     {
         private PlotModel Diagramme = new PlotModel();
         private ChartySheen ChartyChart;
-        public Diagramm(ChartySheen ChartyChart)
+        public Diagramm(ChartySheen charty)
         {
+            ChartyChart = charty;
             this.InitializeComponent();
             ChartyChart.HerrGraph();
             this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
