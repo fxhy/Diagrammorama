@@ -52,36 +52,25 @@ namespace Diagrammorama
 
             LinearAxis AxelY = new LinearAxis();
             CharlesCharteten.Axes.Add(AxelY);
+            CharlesCharteten.Series.Clear();
 
-            List<DataPointSeries> Scotty = new List<DataPointSeries>();
             int found = 0;
-            //bool first = true;
-            //LineSeries Addy = new LineSeries();
-        for (int i = 0; i < Tabellerich.Columns.Count; i++)
+            List<LineSeries> Addy = new List<LineSeries>();
+
+            for (int i = 0; i < Tabellerich.Columns.Count; i++)
             {
                 string serieName = Tabellerich.Columns[i].ColumnName;
                 if ((Y_Achse.Contains(serieName)) && (serieName != X_Achse))
                 {
-                    Scotty.Add(new LineSeries());
-                    Scotty[found].Title = serieName;
-                    Scotty[found].ItemsSource = Tabellerich.AsEnumerable();
-                    Scotty[found].DataFieldX = X_Achse;
-                    Scotty[found].DataFieldY = serieName;
-
-                    CharlesCharteten.Series.Add(Scotty[found]);
+                    Addy.Add (new LineSeries());
+                    Addy[found].Title = serieName;
+                    for (int row = 1; row < Tabellerich.Rows.Count; row++)
+                    {
+                        Addy[found].Points.Add(new OxyPlot.DataPoint(Convert.ToDouble(Tabellerich.Rows[row][X_Achse]), Convert.ToDouble(Tabellerich.Rows[row][serieName])));
+                    }
+                    CharlesCharteten.Series.Add(Addy[found]);
                     found++;
-                    //first = false;
                 }
-                /*else if (!(first) && (Y_Achse.Contains(serieName)) && (serieName != X_Achse))
-                {
-                    Scotty.Add(new LineSeries());
-                    Scotty[found].Title = serieName;
-                    Scotty[found].ItemsSource = Tabellerich.AsEnumerable();
-                    Scotty[found].DataFieldY = serieName;
-                    CharlesCharteten.Series.Add(Scotty[found]);
-                    found++;
-
-                }*/
             }
                                                             /*CharlesCharteten.DataSource = Tabellerich;
 
