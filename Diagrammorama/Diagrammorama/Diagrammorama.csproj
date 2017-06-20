@@ -103,7 +103,6 @@
   <ItemGroup>
     <Compile Include="AttributeVonPanem.cs" />
     <Compile Include="ChartySheen.cs" />
-    <Compile Include="ExportoPatronum.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

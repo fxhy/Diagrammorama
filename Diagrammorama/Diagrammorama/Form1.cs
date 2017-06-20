@@ -21,7 +21,7 @@ namespace Diagrammorama
     {
         private ChartySheen Charty;
         private PRN_Reader PRN;
-        private Diagramm dg;
+        //private Diagramm dg;
         public Form1()
         {
             InitializeComponent();
@@ -98,7 +98,7 @@ namespace Diagrammorama
                 graph.Add(LB_G.Items[ind].ToString());
             }
             Charty.Legende = graph;
-            dg = new Diagramm(Charty);
+            Diagramm dg = new Diagramm(Charty);
             dg.Show();
         }
 

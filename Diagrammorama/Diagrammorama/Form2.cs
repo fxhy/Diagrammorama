@@ -19,7 +19,7 @@ namespace Diagrammorama
 {
     public partial class Diagramm : Form
     {
-        private PlotModel Diagramme = new PlotModel();
+        //private PlotModel Diagramme;
         private ChartySheen ChartyChart;
         public Diagramm(ChartySheen charty)
         {
@@ -27,8 +27,8 @@ namespace Diagrammorama
             this.InitializeComponent();
             ChartyChart.HerrGraph();
             this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
-            Diagramme = ChartyChart.CharlesCharteten;
-            this.plot1.Model = Diagramme;
+            //Diagramme = ChartyChart.CharlesCharteten;
+            this.plot1.Model = ChartyChart.CharlesCharteten;
         }
 
         private void Diagramm_Load(object sender, EventArgs e)

@@ -50,6 +50,7 @@
             this.plot1.Name = "plot1";
             this.plot1.Size = new System.Drawing.Size(632, 446);
             this.plot1.TabIndex = 0;
+            this.Controls.Add(this.plot1);
             // 
             // Diagramm
             // 

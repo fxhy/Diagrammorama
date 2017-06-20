@@ -1,0 +1,13 @@
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\bin\Debug\Diagrammi.exe.config
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\bin\Debug\Diagrammi.exe
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\bin\Debug\Diagrammi.pdb
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\bin\Debug\OxyPlot.dll
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\bin\Debug\OxyPlot.Extensions.dll
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\bin\Debug\OxyPlot.xml
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\obj\Debug\Diagramm.csprojResolveAssemblyReference.cache
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\obj\Debug\Diagrammi.Properties.Resources.resources
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\obj\Debug\Diagramm.csproj.GenerateResource.Cache
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\obj\Debug\Diagrammi.exe
+C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammi\Diagrammi\obj\Debug\Diagrammi.pdb
