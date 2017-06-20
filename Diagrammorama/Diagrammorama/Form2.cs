@@ -21,14 +21,21 @@ namespace Diagrammorama
     {
         //private PlotModel Diagramme;
         private ChartySheen ChartyChart;
-        public Diagramm(ChartySheen charty)
+        public Diagramm(ChartySheen charty, bool first)
         {
             ChartyChart = charty;
             this.InitializeComponent();
             ChartyChart.HerrGraph();
             this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             //Diagramme = ChartyChart.CharlesCharteten;
-            this.plot1.Model = ChartyChart.CharlesCharteten;
+            if (first)
+            {
+                this.plot1.Model = ChartyChart.CharlesCharteten;
+            }
+            else
+            {
+                plot1.Update();
+            }
         }
 
         private void Diagramm_Load(object sender, EventArgs e)
