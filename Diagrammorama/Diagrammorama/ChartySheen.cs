@@ -28,41 +28,39 @@ namespace Diagrammorama
         //Min. und Max. werden festgelegt
         public void Datamana(double high, double low)
         {
-            DataView h = new DataView(Tabelle) {RowFilter = XAchse + " <= " + high};
-            DataTable hTab = h.ToTable();
-            DataView l = new DataView(hTab) {RowFilter = XAchse + " >= " + low};
+            var h = new DataView(Tabelle) {RowFilter = XAchse + " <= " + high};
+            var hTab = h.ToTable();
+            var l = new DataView(hTab) {RowFilter = XAchse + " >= " + low};
             Tabelle = l.ToTable();
         }
 
 
         public void HerrGraph()
         {
-            DataTable tabellerich = Tabelle;
+            var tabellerich = Tabelle;
 
-            LinearAxis axelX = new LinearAxis {Position = AxisPosition.Bottom};
+            var axelX = new LinearAxis {Position = AxisPosition.Bottom};
             CharlesCharteten.Axes.Add(axelX);
 
-            LinearAxis axelY = new LinearAxis();
+            var axelY = new LinearAxis();
             CharlesCharteten.Axes.Add(axelY);
             CharlesCharteten.Series.Clear();
 
-            int found = 0;
-            List<LineSeries> addy = new List<LineSeries>();
+            var found = 0;
+            var addy = new List<LineSeries>();
 
-            for (int i = 0; i < tabellerich.Columns.Count; i++)
+            for (var i = 0; i < tabellerich.Columns.Count; i++)
             {
-                string serieName = tabellerich.Columns[i].ColumnName;
-                if ((YAchse.Contains(serieName)) && (serieName != XAchse))
+                var serieName = tabellerich.Columns[i].ColumnName;
+                if ((!YAchse.Contains(serieName)) || (serieName == XAchse)) continue;
+                addy.Add (new LineSeries());
+                addy[found].Title = serieName;
+                for (var row = 1; row < tabellerich.Rows.Count; row++)
                 {
-                    addy.Add (new LineSeries());
-                    addy[found].Title = serieName;
-                    for (int row = 1; row < tabellerich.Rows.Count; row++)
-                    {
-                        addy[found].Points.Add(new OxyPlot.DataPoint(Convert.ToDouble(tabellerich.Rows[row][XAchse]), Convert.ToDouble(tabellerich.Rows[row][serieName])));
-                    }
-                    CharlesCharteten.Series.Add(addy[found]);
-                    found++;
+                    addy[found].Points.Add(new OxyPlot.DataPoint(Convert.ToDouble(tabellerich.Rows[row][XAchse]), Convert.ToDouble(tabellerich.Rows[row][serieName])));
                 }
+                CharlesCharteten.Series.Add(addy[found]);
+                found++;
             }
                                                             /*CharlesCharteten.DataSource = Tabellerich;
 
