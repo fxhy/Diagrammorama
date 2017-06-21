@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Diagrammorama
 {
@@ -14,7 +10,7 @@ namespace Diagrammorama
         /// <param name="filename">The filename.</param>
         public AttributeVonPanem(string filename)
         {
-            this.Filename = filename;
+            Filename = filename;
         }
 
         /// <summary>
@@ -25,6 +21,6 @@ namespace Diagrammorama
         /// For sub folders, use '/' as path delimiter.
         /// This is then replaced with the current platforms path separator later in the process.
         /// </remarks>
-        public string Filename { get; private set; }
+        public string Filename { get; }
     }
 }

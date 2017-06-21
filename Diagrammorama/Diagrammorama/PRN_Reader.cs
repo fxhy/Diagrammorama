@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Globalization;
 using System.Data;
-using System.Drawing;
 using System.IO;
 
 namespace Diagrammorama
 {
     public class PrnReader
     {
-        private string dp;
+        private readonly string dp;
         public PrnReader(string path)
         {
             dp = path;
@@ -29,7 +24,7 @@ namespace Diagrammorama
             {
                 DataColumn dc = new DataColumn(columnName, typeof(double));
                 result.Columns.Add(dc);
-            };
+            }
             for (int i = 1; i < lineArray.Length; i++)
             {
                 string[] values = lineArray[i].Split(seperatingChars, System.StringSplitOptions.RemoveEmptyEntries);

@@ -1,19 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Globalization;
-using System.Windows.Forms.DataVisualization.Charting;
-using OxyPlot;
-using OxyPlot.Axes;
-using OxyPlot.Series;
-using OxyPlot.WindowsForms;
 
 namespace Diagrammorama
 {
@@ -32,8 +20,7 @@ namespace Diagrammorama
         private void Datei_Click(object sender, EventArgs e)
         {
             //es wird der Explorer geöffnet um eine prn datei auswählen zu können
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Unterstützte Dateien (*.prn)|*.prn";
+            OpenFileDialog ofd = new OpenFileDialog {Filter = "Unterstützte Dateien (*.prn)|*.prn"};
             //datei wird überprüft
             if (ofd.ShowDialog() == DialogResult.OK)
             {

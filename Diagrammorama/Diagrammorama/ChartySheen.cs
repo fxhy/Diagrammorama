@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms.DataVisualization.Charting;
 using System.Data;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
-using OxyPlot.WindowsForms;
 
 namespace Diagrammorama
 {
@@ -33,11 +28,9 @@ namespace Diagrammorama
         //Min. und Max. werden festgelegt
         public void Datamana(double high, double low)
         {
-            DataView h = new DataView(Tabelle);
-            h.RowFilter = XAchse + " <= " + high;
+            DataView h = new DataView(Tabelle) {RowFilter = XAchse + " <= " + high};
             DataTable hTab = h.ToTable();
-            DataView l = new DataView(hTab);
-            l.RowFilter = XAchse + " >= " + low;
+            DataView l = new DataView(hTab) {RowFilter = XAchse + " >= " + low};
             Tabelle = l.ToTable();
         }
 
@@ -46,8 +39,7 @@ namespace Diagrammorama
         {
             DataTable tabellerich = Tabelle;
 
-            LinearAxis axelX = new LinearAxis();
-            axelX.Position = AxisPosition.Bottom;
+            LinearAxis axelX = new LinearAxis {Position = AxisPosition.Bottom};
             CharlesCharteten.Axes.Add(axelX);
 
             LinearAxis axelY = new LinearAxis();

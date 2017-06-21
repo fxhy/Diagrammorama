@@ -1,19 +1,6 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Globalization;
-using System.Windows.Forms.DataVisualization.Charting;
-using OxyPlot;
-using OxyPlot.Axes;
-using OxyPlot.Series;
-using OxyPlot.WindowsForms;
 
 namespace Diagrammorama
 {
@@ -24,13 +11,13 @@ namespace Diagrammorama
         public Diagramm(ChartySheen charty, bool first)
         {
             ChartyChart = charty;
-            this.InitializeComponent();
+            InitializeComponent();
             ChartyChart.HerrGraph();
-            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+            Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             //Diagramme = ChartyChart.CharlesCharteten;
             if (first)
             {
-                this.plot1.Model = ChartyChart.CharlesCharteten;
+                plot1.Model = ChartyChart.CharlesCharteten;
             }
             else
             {
