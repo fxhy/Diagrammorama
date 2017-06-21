@@ -7,17 +7,16 @@ namespace Diagrammorama
     public partial class Diagramm : Form
     {
         //private PlotModel Diagramme;
-        private ChartySheen ChartyChart;
         public Diagramm(ChartySheen charty, bool first)
         {
-            ChartyChart = charty;
+            var chartyChart = charty;
             InitializeComponent();
-            ChartyChart.HerrGraph();
+            chartyChart.HerrGraph();
             Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             //Diagramme = ChartyChart.CharlesCharteten;
             if (first)
             {
-                plot1.Model = ChartyChart.CharlesCharteten;
+                plot1.Model = chartyChart.CharlesCharteten;
             }
             else
             {
