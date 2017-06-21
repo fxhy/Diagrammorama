@@ -17,58 +17,58 @@ namespace Diagrammorama
         public PlotModel CharlesCharteten=new PlotModel();
         
         public string WhatsMyName;
-        public string sub;
+        public string Sub;
 
         //public Chart CharlesCharteten = new Chart();
-        public string X_Achse;
-        public List<string> Y_Achse=new List<string>();
+        public string XAchse;
+        public List<string> YAchse=new List<string>();
         public DataTable Tabelle;
-        public double uper;
-        public double lower;
+        public double Upper;
+        public double Lower;
         public List<string> Legende = new List<string>();
         public ChartySheen(DataTable T)
         {
             Tabelle = T;
         }
         //Min. und Max. werden festgelegt
-        public void datamana(double high, double low)
+        public void Datamana(double high, double low)
         {
-            DataView H = new DataView(Tabelle);
-            H.RowFilter = X_Achse + " <= " + high;
-            DataTable HTab = H.ToTable();
-            DataView L = new DataView(HTab);
-            L.RowFilter = X_Achse + " >= " + low;
-            Tabelle = L.ToTable();
+            DataView h = new DataView(Tabelle);
+            h.RowFilter = XAchse + " <= " + high;
+            DataTable hTab = h.ToTable();
+            DataView l = new DataView(hTab);
+            l.RowFilter = XAchse + " >= " + low;
+            Tabelle = l.ToTable();
         }
 
 
         public void HerrGraph()
         {
-            DataTable Tabellerich = Tabelle;
+            DataTable tabellerich = Tabelle;
 
-            LinearAxis AxelX = new LinearAxis();
-            AxelX.Position = AxisPosition.Bottom;
-            CharlesCharteten.Axes.Add(AxelX);
+            LinearAxis axelX = new LinearAxis();
+            axelX.Position = AxisPosition.Bottom;
+            CharlesCharteten.Axes.Add(axelX);
 
-            LinearAxis AxelY = new LinearAxis();
-            CharlesCharteten.Axes.Add(AxelY);
+            LinearAxis axelY = new LinearAxis();
+            CharlesCharteten.Axes.Add(axelY);
             CharlesCharteten.Series.Clear();
 
             int found = 0;
-            List<LineSeries> Addy = new List<LineSeries>();
+            List<LineSeries> addy = new List<LineSeries>();
 
-            for (int i = 0; i < Tabellerich.Columns.Count; i++)
+            for (int i = 0; i < tabellerich.Columns.Count; i++)
             {
-                string serieName = Tabellerich.Columns[i].ColumnName;
-                if ((Y_Achse.Contains(serieName)) && (serieName != X_Achse))
+                string serieName = tabellerich.Columns[i].ColumnName;
+                if ((YAchse.Contains(serieName)) && (serieName != XAchse))
                 {
-                    Addy.Add (new LineSeries());
-                    Addy[found].Title = serieName;
-                    for (int row = 1; row < Tabellerich.Rows.Count; row++)
+                    addy.Add (new LineSeries());
+                    addy[found].Title = serieName;
+                    for (int row = 1; row < tabellerich.Rows.Count; row++)
                     {
-                        Addy[found].Points.Add(new OxyPlot.DataPoint(Convert.ToDouble(Tabellerich.Rows[row][X_Achse]), Convert.ToDouble(Tabellerich.Rows[row][serieName])));
+                        addy[found].Points.Add(new OxyPlot.DataPoint(Convert.ToDouble(tabellerich.Rows[row][XAchse]), Convert.ToDouble(tabellerich.Rows[row][serieName])));
                     }
-                    CharlesCharteten.Series.Add(Addy[found]);
+                    CharlesCharteten.Series.Add(addy[found]);
                     found++;
                 }
             }

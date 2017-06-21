@@ -122,3 +122,34 @@ C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\bin\
 C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.exe.manifest
 C:\Users\Fabian Hein\Source\Repos\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.application
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Diagrammorama.exe.config
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.exe
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.pdb
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Diagrammorama.exe.manifest
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Diagrammorama.application
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Diagrammorama.exe
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Diagrammorama.pdb
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\OxyPlot.dll
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\OxyPlot.Xamarin.Forms.dll
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\OxyPlot.pdb
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\OxyPlot.xml
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\OxyPlot.WindowsForms.pdb
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\OxyPlot.Xamarin.Forms.pdb
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\OxyPlot.Xamarin.Forms.xml
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.csprojResolveAssemblyReference.cache
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.Form1.resources
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.Diagramm.resources
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.Properties.Resources.resources
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.csproj.GenerateResource.Cache
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.exe.manifest
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.application
