@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
@@ -9,8 +10,14 @@ namespace Diagrammorama
 {
     public class ChartySheen
     {
-        public PlotModel CharlesCharteten=new PlotModel();
-        
+        public List<PlotModel> charterinos=new List<PlotModel>();
+
+        public PlotModel CharlesCharteten
+        {
+            get { return charterinos.Last(); }
+        }
+
+
         public string WhatsMyName;
         public string Sub;
 
@@ -24,6 +31,7 @@ namespace Diagrammorama
         public ChartySheen(DataTable T)
         {
             Tabelle = T;
+            charterinos.Add(new PlotModel());
         }
         //Min. und Max. werden festgelegt
         public void Datamana(double high, double low)

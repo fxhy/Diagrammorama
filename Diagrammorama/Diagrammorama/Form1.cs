@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using OxyPlot;
 
 namespace Diagrammorama
 {
@@ -9,7 +10,6 @@ namespace Diagrammorama
     {
         private ChartySheen _charty;
         private PrnReader _prn;
-        private bool _f = true;
         //private Diagramm dg;
         public Form1()
         {
@@ -71,6 +71,7 @@ namespace Diagrammorama
 
         private void button1_Click(object sender, EventArgs e)
         {
+            _charty.charterinos.Add(new PlotModel());
             List<string> graph = new List<string>();
             double l = Convert.ToDouble(Anfangswert.Text);
             double h = Convert.ToDouble(Endwert.Text);
@@ -86,9 +87,8 @@ namespace Diagrammorama
                 graph.Add(LB_G.Items[ind].ToString());
             }
             _charty.Legende = graph;
-            Diagramm dg = new Diagramm(_charty,_f);
+            Diagramm dg = new Diagramm(_charty);
             dg.Show();
-            _f = false;
         }
 
         private void GraphNeu_Click(object sender, EventArgs e)
