@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Diagrammorama.exe" size="19928">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Diagrammorama.exe" size="28120">
       <assemblyIdentity name="Diagrammorama" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Q/RaWTz3LS4cFOfqxOYBL8WKkc1ci5rRmQI1M00biy8=</dsig:DigestValue>
+        <dsig:DigestValue>PTOXuSZVFGgbxPZkJtGVlURQExRAwN9VDIPf6gjoULc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
