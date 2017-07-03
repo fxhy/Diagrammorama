@@ -8,9 +8,9 @@ namespace Diagrammorama
 {
     public partial class Form1 : Form
     {
+        private bool _check = false;
         private ChartySheen _charty;
         private PrnReader _prn;
-        //private Diagramm dg;
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +24,7 @@ namespace Diagrammorama
             //datei wird überprüft
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                _check =true;
                 string file = ofd.FileName;
                 Dateipfad.Text = file;
                 //ein objekt der PRN_Reader Klasse wird erzeugt und der Dateipfad übergeben
@@ -38,10 +39,6 @@ namespace Diagrammorama
                 var maxRow = prnT.Select(prnT.Columns[0].ColumnName+ " = MAX("+ prnT.Columns[0].ColumnName +")")[0];
                 Endwert.Text = Convert.ToString(maxRow[0]);
                 Anfangswert.Text = Convert.ToString( minRow[0]);
-                /*PlotView myPlot = new PlotView();
-                myPlot.Location = new Point(0, 0);
-                myPlot.Dock = DockStyle.Fill;
-                myPlot.Model = CreatePlotModel(prn);*/
             }
 
         }
@@ -71,55 +68,36 @@ namespace Diagrammorama
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _charty.charterinos.Add(new PlotModel());
-            List<string> graph = new List<string>();
-            double l = Convert.ToDouble(Anfangswert.Text);
-            double h = Convert.ToDouble(Endwert.Text);
-            _charty.Datamana(h, l);
-            //übernehmen der ausgewählten Datenquellen für die Graphen
-            _charty.YAchse.Clear();
-            foreach (object itemChecked in LB_Y.CheckedItems)
+            if (_check)
             {
-                _charty.YAchse.Add(itemChecked.ToString());
+                _charty.charterinos.Add(new PlotModel());
+                List<string> graph = new List<string>();
+                double l = Convert.ToDouble(Anfangswert.Text);
+                double h = Convert.ToDouble(Endwert.Text);
+                _charty.Datamana(h, l);
+                //übernehmen der ausgewählten Datenquellen für die Graphen
+                _charty.YAchse.Clear();
+                foreach (object itemChecked in LB_Y.CheckedItems)
+                {
+                    _charty.YAchse.Add(itemChecked.ToString());
+                }
+                foreach (int ind in LB_Y.CheckedIndices)
+                {
+                    graph.Add(LB_G.Items[ind].ToString());
+                }
+                _charty.Legende = graph;
+                Diagramm dg = new Diagramm(_charty);
+                dg.Show();
             }
-            foreach  (int ind in LB_Y.CheckedIndices)
+            else
             {
-                graph.Add(LB_G.Items[ind].ToString());
+                MessageBox.Show("Bitte Datei Laden!");
             }
-            _charty.Legende = graph;
-            Diagramm dg = new Diagramm(_charty);
-            dg.Show();
         }
 
         private void GraphNeu_Click(object sender, EventArgs e)
         {
             LB_G.Items[LB_G.SelectedIndex]= graph_neu.Text;
         }
-        /* public PlotModel CreatePlotModel(DataTable tab)
-{
-PlotModel MyModel = new PlotModel();
-MyModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Minimum = 0 });
-MyModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Minimum = 0 });
-
-for (int i = 1; i < tab.Columns.Count; i++)
-{
-string serieName = tab.Columns[i].ColumnName;
-LineSeries serie = new LineSeries();
-if (serieName != "order")
-{
-for (int row = 1; row < tab.Rows.Count; row++)
-{
-double x = Convert.ToDouble( tab.Rows[row][tab.Columns[0].ColumnName]);
-double y = Convert.ToDouble(tab.Rows[row][serieName]);
-serie.Points.Add(new OxyPlot.DataPoint (x, y));
-
-}
-MyModel.Series.Add(serie);
-}
-
-}
-return MyModel;
-
-}*/
     }
 }

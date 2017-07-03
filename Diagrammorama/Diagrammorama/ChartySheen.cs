@@ -21,7 +21,6 @@ namespace Diagrammorama
         public string WhatsMyName;
         public string Sub;
 
-        //public Chart CharlesCharteten = new Chart();
         public string XAchse;
         public List<string> YAchse=new List<string>();
         public DataTable Tabelle;
@@ -70,22 +69,6 @@ namespace Diagrammorama
                 CharlesCharteten.Series.Add(addy[found]);
                 found++;
             }
-                                                            /*CharlesCharteten.DataSource = Tabellerich;
-
-                                                            for (int i = 0; i < Tabellerich.Columns.Count; i++)
-                                                            {
-                                                                string serieName = Tabellerich.Columns[i].ColumnName;
-                                                                if ((Y_Achse.Contains(serieName)) & (serieName != X_Achse))
-                                                                {
-                                                                    CharlesCharteten.Series.Add(serieName);
-                                                                    CharlesCharteten.Series[serieName].ChartType = SeriesChartType.FastLine;
-                                                                    for (int row = 1; row < Tabellerich.Rows.Count; row++)
-                                                                    {
-                                                                        CharlesCharteten.Series[serieName].Points.AddXY
-                                                                            (Tabellerich.Rows[row][X_Achse], Tabellerich.Rows[row][serieName]);
-                                                                    }
-                                                                }
-                                                            }*/
         }
     }
 }
