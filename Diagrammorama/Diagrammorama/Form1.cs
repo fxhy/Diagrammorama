@@ -90,6 +90,15 @@ namespace Diagrammorama
                     graph.Add(LB_G.Items[ind].ToString());
                 }
                 _charty.Legende = graph;
+                charterini.LegendTitle = legUpperschrift.Text;
+                if (rb_innen.Checked)
+                {
+                    charterini.LegendPlacement = LegendPlacement.Inside;
+                }
+                else
+                {
+                    charterini.LegendPlacement = LegendPlacement.Outside;
+                }
                 Diagramm dg = new Diagramm(_charty);
                 dg.Show();
             }

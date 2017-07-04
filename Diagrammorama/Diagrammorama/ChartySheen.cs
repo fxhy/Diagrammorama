@@ -60,8 +60,9 @@ namespace Diagrammorama
             {
                 var serieName = tabellerich.Columns[i].ColumnName;
                 if ((!YAchse.Contains(serieName)) || (serieName == XAchse)) continue;
+                var who = YAchse.IndexOf(serieName);
                 addy.Add (new LineSeries());
-                addy[found].Title = serieName;
+                addy[found].Title = Legende[who];
                 for (var row = 1; row < tabellerich.Rows.Count; row++)
                 {
                     addy[found].Points.Add(new OxyPlot.DataPoint(Convert.ToDouble(tabellerich.Rows[row][XAchse]), Convert.ToDouble(tabellerich.Rows[row][serieName])));

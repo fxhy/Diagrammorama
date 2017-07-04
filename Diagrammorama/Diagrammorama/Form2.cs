@@ -18,8 +18,8 @@ namespace Diagrammorama
             InitializeComponent();
             chartyChart.HerrGraph();
             Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
-            //Diagramme = ChartyChart.CharlesCharteten;
             plot1.Model = chartyChart.CharlesCharteten;
+            
         }
 
         private void Diagramm_Load(object sender, EventArgs e)

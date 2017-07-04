@@ -64,6 +64,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.upperschrift = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.legUpperschrift = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rb_innen = new System.Windows.Forms.RadioButton();
+            this.rb_aussen = new System.Windows.Forms.RadioButton();
+            this.Legendenposition = new System.Windows.Forms.Panel();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Graphen.SuspendLayout();
@@ -76,6 +81,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel_iAmLegend.SuspendLayout();
+            this.Legendenposition.SuspendLayout();
             this.SuspendLayout();
             // 
             // Datei
@@ -123,6 +129,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
             this.groupBox2.Controls.Add(this.Graphen);
             this.groupBox2.Controls.Add(this.LB_Y);
             this.groupBox2.Location = new System.Drawing.Point(212, 6);
@@ -136,6 +143,7 @@
             // 
             // Graphen
             // 
+            this.Graphen.BackColor = System.Drawing.Color.DarkGray;
             this.Graphen.Controls.Add(this.GraphNeu);
             this.Graphen.Controls.Add(this.graph_neu);
             this.Graphen.Controls.Add(this.label3);
@@ -193,11 +201,12 @@
             this.LB_Y.Location = new System.Drawing.Point(20, 25);
             this.LB_Y.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LB_Y.Name = "LB_Y";
-            this.LB_Y.Size = new System.Drawing.Size(120, 72);
+            this.LB_Y.Size = new System.Drawing.Size(120, 89);
             this.LB_Y.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.LB_X);
             this.groupBox1.Location = new System.Drawing.Point(5, 6);
@@ -211,6 +220,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.DarkGray;
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.Endwert);
@@ -339,19 +349,25 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.DarkGray;
+            this.groupBox4.Controls.Add(this.Legendenposition);
+            this.groupBox4.Controls.Add(this.legUpperschrift);
+            this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.panel_iAmLegend);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.upperschrift);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(184, 287);
+            this.groupBox4.Size = new System.Drawing.Size(231, 454);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Text";
             // 
             // panel_iAmLegend
             // 
+            this.panel_iAmLegend.BackgroundImage = global::Diagrammorama.Properties.Resources.Backround;
+            this.panel_iAmLegend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_iAmLegend.Controls.Add(this.rb_rightMiddle);
             this.panel_iAmLegend.Controls.Add(this.rb_leftMiddle);
             this.panel_iAmLegend.Controls.Add(this.rb_bottomRight);
@@ -360,19 +376,18 @@
             this.panel_iAmLegend.Controls.Add(this.rb_topRight);
             this.panel_iAmLegend.Controls.Add(this.rb_topCenter);
             this.panel_iAmLegend.Controls.Add(this.rb_topLeft);
-            this.panel_iAmLegend.Location = new System.Drawing.Point(9, 104);
+            this.panel_iAmLegend.Location = new System.Drawing.Point(22, 157);
             this.panel_iAmLegend.Name = "panel_iAmLegend";
-            this.panel_iAmLegend.Size = new System.Drawing.Size(152, 159);
+            this.panel_iAmLegend.Size = new System.Drawing.Size(189, 159);
             this.panel_iAmLegend.TabIndex = 3;
             // 
             // rb_rightMiddle
             // 
             this.rb_rightMiddle.AutoSize = true;
-            this.rb_rightMiddle.Location = new System.Drawing.Point(112, 67);
+            this.rb_rightMiddle.Location = new System.Drawing.Point(152, 67);
             this.rb_rightMiddle.Name = "rb_rightMiddle";
             this.rb_rightMiddle.Size = new System.Drawing.Size(17, 16);
             this.rb_rightMiddle.TabIndex = 10;
-            this.rb_rightMiddle.TabStop = true;
             this.rb_rightMiddle.UseVisualStyleBackColor = true;
             // 
             // rb_leftMiddle
@@ -382,27 +397,24 @@
             this.rb_leftMiddle.Name = "rb_leftMiddle";
             this.rb_leftMiddle.Size = new System.Drawing.Size(17, 16);
             this.rb_leftMiddle.TabIndex = 9;
-            this.rb_leftMiddle.TabStop = true;
             this.rb_leftMiddle.UseVisualStyleBackColor = true;
             // 
             // rb_bottomRight
             // 
             this.rb_bottomRight.AutoSize = true;
-            this.rb_bottomRight.Location = new System.Drawing.Point(112, 117);
+            this.rb_bottomRight.Location = new System.Drawing.Point(152, 117);
             this.rb_bottomRight.Name = "rb_bottomRight";
             this.rb_bottomRight.Size = new System.Drawing.Size(17, 16);
             this.rb_bottomRight.TabIndex = 8;
-            this.rb_bottomRight.TabStop = true;
             this.rb_bottomRight.UseVisualStyleBackColor = true;
             // 
             // rb_bottomCenter
             // 
             this.rb_bottomCenter.AutoSize = true;
-            this.rb_bottomCenter.Location = new System.Drawing.Point(68, 117);
+            this.rb_bottomCenter.Location = new System.Drawing.Point(81, 117);
             this.rb_bottomCenter.Name = "rb_bottomCenter";
             this.rb_bottomCenter.Size = new System.Drawing.Size(17, 16);
             this.rb_bottomCenter.TabIndex = 7;
-            this.rb_bottomCenter.TabStop = true;
             this.rb_bottomCenter.UseVisualStyleBackColor = true;
             // 
             // rb_bottomLeft
@@ -412,13 +424,13 @@
             this.rb_bottomLeft.Name = "rb_bottomLeft";
             this.rb_bottomLeft.Size = new System.Drawing.Size(17, 16);
             this.rb_bottomLeft.TabIndex = 6;
-            this.rb_bottomLeft.TabStop = true;
             this.rb_bottomLeft.UseVisualStyleBackColor = true;
             // 
             // rb_topRight
             // 
             this.rb_topRight.AutoSize = true;
-            this.rb_topRight.Location = new System.Drawing.Point(112, 21);
+            this.rb_topRight.Checked = true;
+            this.rb_topRight.Location = new System.Drawing.Point(152, 21);
             this.rb_topRight.Name = "rb_topRight";
             this.rb_topRight.Size = new System.Drawing.Size(17, 16);
             this.rb_topRight.TabIndex = 2;
@@ -428,11 +440,10 @@
             // rb_topCenter
             // 
             this.rb_topCenter.AutoSize = true;
-            this.rb_topCenter.Location = new System.Drawing.Point(68, 21);
+            this.rb_topCenter.Location = new System.Drawing.Point(81, 21);
             this.rb_topCenter.Name = "rb_topCenter";
             this.rb_topCenter.Size = new System.Drawing.Size(17, 16);
             this.rb_topCenter.TabIndex = 1;
-            this.rb_topCenter.TabStop = true;
             this.rb_topCenter.UseVisualStyleBackColor = true;
             // 
             // rb_topLeft
@@ -442,13 +453,12 @@
             this.rb_topLeft.Name = "rb_topLeft";
             this.rb_topLeft.Size = new System.Drawing.Size(17, 16);
             this.rb_topLeft.TabIndex = 0;
-            this.rb_topLeft.TabStop = true;
             this.rb_topLeft.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 83);
+            this.label5.Location = new System.Drawing.Point(47, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 17);
             this.label5.TabIndex = 2;
@@ -456,19 +466,66 @@
             // 
             // upperschrift
             // 
-            this.upperschrift.Location = new System.Drawing.Point(9, 48);
+            this.upperschrift.Location = new System.Drawing.Point(50, 58);
             this.upperschrift.Name = "upperschrift";
-            this.upperschrift.Size = new System.Drawing.Size(100, 22);
+            this.upperschrift.Size = new System.Drawing.Size(118, 22);
             this.upperschrift.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 28);
+            this.label4.Location = new System.Drawing.Point(68, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Überschrift";
+            // 
+            // legUpperschrift
+            // 
+            this.legUpperschrift.Location = new System.Drawing.Point(63, 351);
+            this.legUpperschrift.Name = "legUpperschrift";
+            this.legUpperschrift.Size = new System.Drawing.Size(118, 22);
+            this.legUpperschrift.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(52, 331);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 17);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Legendenüberschrift";
+            // 
+            // rb_innen
+            // 
+            this.rb_innen.AutoSize = true;
+            this.rb_innen.Checked = true;
+            this.rb_innen.Location = new System.Drawing.Point(9, 0);
+            this.rb_innen.Name = "rb_innen";
+            this.rb_innen.Size = new System.Drawing.Size(64, 21);
+            this.rb_innen.TabIndex = 6;
+            this.rb_innen.TabStop = true;
+            this.rb_innen.Text = "Innen";
+            this.rb_innen.UseVisualStyleBackColor = true;
+            // 
+            // rb_aussen
+            // 
+            this.rb_aussen.AutoSize = true;
+            this.rb_aussen.Location = new System.Drawing.Point(9, 23);
+            this.rb_aussen.Name = "rb_aussen";
+            this.rb_aussen.Size = new System.Drawing.Size(71, 21);
+            this.rb_aussen.TabIndex = 7;
+            this.rb_aussen.Text = "Außen";
+            this.rb_aussen.UseVisualStyleBackColor = true;
+            // 
+            // Legendenposition
+            // 
+            this.Legendenposition.Controls.Add(this.rb_innen);
+            this.Legendenposition.Controls.Add(this.rb_aussen);
+            this.Legendenposition.Location = new System.Drawing.Point(25, 104);
+            this.Legendenposition.Name = "Legendenposition";
+            this.Legendenposition.Size = new System.Drawing.Size(90, 47);
+            this.Legendenposition.TabIndex = 8;
             // 
             // Form1
             // 
@@ -498,6 +555,8 @@
             this.groupBox4.PerformLayout();
             this.panel_iAmLegend.ResumeLayout(false);
             this.panel_iAmLegend.PerformLayout();
+            this.Legendenposition.ResumeLayout(false);
+            this.Legendenposition.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,6 +600,11 @@
         private System.Windows.Forms.RadioButton rb_bottomRight;
         private System.Windows.Forms.RadioButton rb_bottomCenter;
         private System.Windows.Forms.RadioButton rb_bottomLeft;
+        private System.Windows.Forms.TextBox legUpperschrift;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton rb_aussen;
+        private System.Windows.Forms.RadioButton rb_innen;
+        private System.Windows.Forms.Panel Legendenposition;
     }
 }
 
