@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using OxyPlot;
 
@@ -71,6 +72,9 @@ namespace Diagrammorama
             if (_check)
             {
                 _charty.charterinos.Add(new PlotModel());
+                var charterini = _charty.charterinos[_charty.charterinos.Count - 1];
+                charterini.Title = upperschrift.Text;
+                charterini.LegendPosition = (LegendPosition)GetIndex();
                 List<string> graph = new List<string>();
                 double l = Convert.ToDouble(Anfangswert.Text);
                 double h = Convert.ToDouble(Endwert.Text);
@@ -92,6 +96,34 @@ namespace Diagrammorama
             else
             {
                 MessageBox.Show("Bitte Datei Laden!");
+            }
+        }
+
+        private int GetIndex()
+        {
+            var checkedButton = panel_iAmLegend.Controls.OfType<RadioButton>()
+                .FirstOrDefault(r => r.Checked);
+            switch (checkedButton.Name)
+            {
+                case "rb_topLeft":
+                    return 0;
+                case "rb_topCenter":
+                    return 1;
+                case "rb_topRight":
+                    return 2;
+                case "rb_bottomLeft":
+                    return 3;
+                case "rb_bottomCenter":
+                    return 4;
+                case "rb_bottomRight":
+                    return 5;
+                case "rb_leftMiddle":
+                    return 7;
+                case "rb_rightMiddle":
+                    return 10;
+                default:
+                    return 2;
+
             }
         }
 

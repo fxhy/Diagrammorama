@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Data;
 using System.IO;
@@ -18,13 +19,15 @@ namespace Diagrammorama
             string[] lineArray = File.ReadAllLines(_dp);
             char[] seperatingChars = { ' ', '#' };
 
-
             string[] columns = lineArray[0].Split(seperatingChars, StringSplitOptions.RemoveEmptyEntries);
             foreach (string columnName in columns)
             {
-                DataColumn dc = new DataColumn(columnName, typeof(double));
-                result.Columns.Add(dc);
+                result.Columns.Add(new DataColumn(columnName, typeof(double)));
             }
+
+
+
+
             for (int i = 1; i < lineArray.Length; i++)
             {
                 string[] values = lineArray[i].Split(seperatingChars, StringSplitOptions.RemoveEmptyEntries);
