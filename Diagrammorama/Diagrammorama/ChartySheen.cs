@@ -20,6 +20,7 @@ namespace Diagrammorama
 
         public string WhatsMyName;
         public string Sub;
+        public string Axel;
 
         public string XAchse;
         public List<string> YAchse=new List<string>();
@@ -31,6 +32,7 @@ namespace Diagrammorama
         {
             Tabelle = T;
             charterinos.Add(new PlotModel());
+            CharlesCharteten.PlotAreaBorderColor = OxyColors.Transparent;
         }
         //Min. und Max. werden festgelegt
         public void Datamana(double high, double low)
@@ -46,15 +48,22 @@ namespace Diagrammorama
         {
             var tabellerich = Tabelle;
 
-            var axelX = new LinearAxis {Position = AxisPosition.Bottom};
+            var axelX = new LinearAxis
+            {
+                Position = AxisPosition.Bottom,
+                Title = Axel
+            };
             CharlesCharteten.Axes.Add(axelX);
 
             var axelY = new LinearAxis();
             CharlesCharteten.Axes.Add(axelY);
+
             CharlesCharteten.Series.Clear();
 
+            CharlesCharteten.Title = WhatsMyName;
+
             var found = 0;
-            var addy = new List<LineSeries>();
+            var addy = new List<LineSeries>(); //AreaSeries() für gefülte unterseite
             int stylo = 0;
 
             for (var i = 0; i < tabellerich.Columns.Count; i++)

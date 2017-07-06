@@ -52,6 +52,11 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Legendenposition = new System.Windows.Forms.Panel();
+            this.rb_innen = new System.Windows.Forms.RadioButton();
+            this.rb_aussen = new System.Windows.Forms.RadioButton();
+            this.legUpperschrift = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel_iAmLegend = new System.Windows.Forms.Panel();
             this.rb_rightMiddle = new System.Windows.Forms.RadioButton();
             this.rb_leftMiddle = new System.Windows.Forms.RadioButton();
@@ -64,11 +69,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.upperschrift = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.legUpperschrift = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.rb_innen = new System.Windows.Forms.RadioButton();
-            this.rb_aussen = new System.Windows.Forms.RadioButton();
-            this.Legendenposition = new System.Windows.Forms.Panel();
+            this.XTitle = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Graphen.SuspendLayout();
@@ -80,8 +82,8 @@
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.panel_iAmLegend.SuspendLayout();
             this.Legendenposition.SuspendLayout();
+            this.panel_iAmLegend.SuspendLayout();
             this.SuspendLayout();
             // 
             // Datei
@@ -221,6 +223,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.DarkGray;
+            this.groupBox3.Controls.Add(this.XTitle);
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.Endwert);
@@ -364,6 +368,53 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Text";
             // 
+            // Legendenposition
+            // 
+            this.Legendenposition.Controls.Add(this.rb_innen);
+            this.Legendenposition.Controls.Add(this.rb_aussen);
+            this.Legendenposition.Location = new System.Drawing.Point(25, 104);
+            this.Legendenposition.Name = "Legendenposition";
+            this.Legendenposition.Size = new System.Drawing.Size(90, 47);
+            this.Legendenposition.TabIndex = 8;
+            // 
+            // rb_innen
+            // 
+            this.rb_innen.AutoSize = true;
+            this.rb_innen.Checked = true;
+            this.rb_innen.Location = new System.Drawing.Point(9, 0);
+            this.rb_innen.Name = "rb_innen";
+            this.rb_innen.Size = new System.Drawing.Size(64, 21);
+            this.rb_innen.TabIndex = 6;
+            this.rb_innen.TabStop = true;
+            this.rb_innen.Text = "Innen";
+            this.rb_innen.UseVisualStyleBackColor = true;
+            // 
+            // rb_aussen
+            // 
+            this.rb_aussen.AutoSize = true;
+            this.rb_aussen.Location = new System.Drawing.Point(9, 23);
+            this.rb_aussen.Name = "rb_aussen";
+            this.rb_aussen.Size = new System.Drawing.Size(71, 21);
+            this.rb_aussen.TabIndex = 7;
+            this.rb_aussen.Text = "Außen";
+            this.rb_aussen.UseVisualStyleBackColor = true;
+            // 
+            // legUpperschrift
+            // 
+            this.legUpperschrift.Location = new System.Drawing.Point(63, 351);
+            this.legUpperschrift.Name = "legUpperschrift";
+            this.legUpperschrift.Size = new System.Drawing.Size(118, 22);
+            this.legUpperschrift.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(52, 331);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 17);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Legendenüberschrift";
+            // 
             // panel_iAmLegend
             // 
             this.panel_iAmLegend.BackgroundImage = global::Diagrammorama.Properties.Resources.Backround;
@@ -480,52 +531,22 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Überschrift";
             // 
-            // legUpperschrift
+            // XTitle
             // 
-            this.legUpperschrift.Location = new System.Drawing.Point(63, 351);
-            this.legUpperschrift.Name = "legUpperschrift";
-            this.legUpperschrift.Size = new System.Drawing.Size(118, 22);
-            this.legUpperschrift.TabIndex = 5;
+            this.XTitle.Location = new System.Drawing.Point(7, 152);
+            this.XTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.XTitle.Name = "XTitle";
+            this.XTitle.Size = new System.Drawing.Size(120, 22);
+            this.XTitle.TabIndex = 5;
             // 
-            // label6
+            // label7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(52, 331);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 17);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Legendenüberschrift";
-            // 
-            // rb_innen
-            // 
-            this.rb_innen.AutoSize = true;
-            this.rb_innen.Checked = true;
-            this.rb_innen.Location = new System.Drawing.Point(9, 0);
-            this.rb_innen.Name = "rb_innen";
-            this.rb_innen.Size = new System.Drawing.Size(64, 21);
-            this.rb_innen.TabIndex = 6;
-            this.rb_innen.TabStop = true;
-            this.rb_innen.Text = "Innen";
-            this.rb_innen.UseVisualStyleBackColor = true;
-            // 
-            // rb_aussen
-            // 
-            this.rb_aussen.AutoSize = true;
-            this.rb_aussen.Location = new System.Drawing.Point(9, 23);
-            this.rb_aussen.Name = "rb_aussen";
-            this.rb_aussen.Size = new System.Drawing.Size(71, 21);
-            this.rb_aussen.TabIndex = 7;
-            this.rb_aussen.Text = "Außen";
-            this.rb_aussen.UseVisualStyleBackColor = true;
-            // 
-            // Legendenposition
-            // 
-            this.Legendenposition.Controls.Add(this.rb_innen);
-            this.Legendenposition.Controls.Add(this.rb_aussen);
-            this.Legendenposition.Location = new System.Drawing.Point(25, 104);
-            this.Legendenposition.Name = "Legendenposition";
-            this.Legendenposition.Size = new System.Drawing.Size(90, 47);
-            this.Legendenposition.TabIndex = 8;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 132);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 17);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Achsen Bezeichnung";
             // 
             // Form1
             // 
@@ -553,10 +574,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.panel_iAmLegend.ResumeLayout(false);
-            this.panel_iAmLegend.PerformLayout();
             this.Legendenposition.ResumeLayout(false);
             this.Legendenposition.PerformLayout();
+            this.panel_iAmLegend.ResumeLayout(false);
+            this.panel_iAmLegend.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,6 +626,8 @@
         private System.Windows.Forms.RadioButton rb_aussen;
         private System.Windows.Forms.RadioButton rb_innen;
         private System.Windows.Forms.Panel Legendenposition;
+        private System.Windows.Forms.TextBox XTitle;
+        private System.Windows.Forms.Label label7;
     }
 }
 

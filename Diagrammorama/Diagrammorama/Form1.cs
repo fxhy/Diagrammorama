@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using OxyPlot;
+using OxyPlot.Axes;
 
 namespace Diagrammorama
 {
@@ -35,7 +36,7 @@ namespace Diagrammorama
                 //ein neues Objekt der ChartySheen Klasse wird erzeugt und die Datenquelle übergeben
                 _charty = new ChartySheen(prnT);
                 Lb(prnT);
-
+                
                 var minRow = prnT.Select(prnT.Columns[0].ColumnName + " = MIN(" + prnT.Columns[0].ColumnName + ")")[0];
                 var maxRow = prnT.Select(prnT.Columns[0].ColumnName+ " = MAX("+ prnT.Columns[0].ColumnName +")")[0];
                 Endwert.Text = Convert.ToString(maxRow[0]);
@@ -72,8 +73,11 @@ namespace Diagrammorama
             if (_check)
             {
                 _charty.charterinos.Add(new PlotModel());
-                var charterini = _charty.charterinos[_charty.charterinos.Count - 1];
-                charterini.Title = upperschrift.Text;
+                var charterini = _charty.CharlesCharteten;
+                //Überschrift übernehmen
+                _charty.WhatsMyName = upperschrift.Text;
+                //X-Achsen Überschrift übernehmen
+                _charty.Axel = XTitle.Text;
                 charterini.LegendPosition = (LegendPosition)GetIndex();
                 List<string> graph = new List<string>();
                 double l = Convert.ToDouble(Anfangswert.Text);
