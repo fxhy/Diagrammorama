@@ -90,7 +90,9 @@ namespace Diagrammorama
                     graph.Add(LB_G.Items[ind].ToString());
                 }
                 _charty.Legende = graph;
+                //Überschrift der Legende übernehmen
                 charterini.LegendTitle = legUpperschrift.Text;
+                //Legendenposition wählen
                 if (rb_innen.Checked)
                 {
                     charterini.LegendPlacement = LegendPlacement.Inside;

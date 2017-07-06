@@ -55,6 +55,7 @@ namespace Diagrammorama
 
             var found = 0;
             var addy = new List<LineSeries>();
+            int stylo = 0;
 
             for (var i = 0; i < tabellerich.Columns.Count; i++)
             {
@@ -63,6 +64,13 @@ namespace Diagrammorama
                 var who = YAchse.IndexOf(serieName);
                 addy.Add (new LineSeries());
                 addy[found].Title = Legende[who];
+                addy[found].LineStyle = (LineStyle) stylo;
+                stylo++;
+                if (stylo==11)
+                {
+                    stylo = 0;
+                }
+
                 for (var row = 1; row < tabellerich.Rows.Count; row++)
                 {
                     addy[found].Points.Add(new OxyPlot.DataPoint(Convert.ToDouble(tabellerich.Rows[row][XAchse]), Convert.ToDouble(tabellerich.Rows[row][serieName])));
