@@ -10,11 +10,11 @@ namespace Diagrammorama
 {
     public class ChartySheen
     {
-        public List<PlotModel> charterinos=new List<PlotModel>();
+        public List<PlotModel> Charterinos=new List<PlotModel>();
 
         public PlotModel CharlesCharteten
         {
-            get { return charterinos.Last(); }
+            get { return Charterinos.Last(); }
         }
 
 
@@ -31,7 +31,7 @@ namespace Diagrammorama
         public ChartySheen(DataTable T)
         {
             Tabelle = T;
-            charterinos.Add(new PlotModel());
+            Charterinos.Add(new PlotModel());
             CharlesCharteten.PlotAreaBorderColor = OxyColors.Transparent;
         }
         //Min. und Max. werden festgelegt
