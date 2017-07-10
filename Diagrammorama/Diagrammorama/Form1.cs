@@ -3,24 +3,19 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using System.Data.OleDb;
-using System.IO;
 using OxyPlot;
-using OxyPlot.Axes;
-using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Diagrammorama
 {
     public partial class Form1 : Form
     {
-        private DataTable prnT;
-        private bool _check = false;
+        private DataTable _prnT;
+        private bool _check;
         private ChartySheen _charty;
         private PrnReader _prn;
         public Form1()
         {
             InitializeComponent();
-            
         }
 
         private void Datei_Click(object sender, EventArgs e)
@@ -35,14 +30,14 @@ namespace Diagrammorama
                 Dateipfad.Text = file;
                 //ein objekt der PRN_Reader Klasse wird erzeugt und der Dateipfad übergeben
                 _prn = new PrnReader(file);
-                prnT = _prn.Tabelle();
-                Anzeige.DataSource = prnT;
+                _prnT = _prn.Tabelle();
+                Anzeige.DataSource = _prnT;
                 //ein neues Objekt der ChartySheen Klasse wird erzeugt und die Datenquelle übergeben
-                _charty = new ChartySheen(prnT);
-                Lb(prnT);
+                _charty = new ChartySheen(_prnT);
+                Lb(_prnT);
                 
-                var minRow = prnT.Select(prnT.Columns[0].ColumnName + " = MIN(" + prnT.Columns[0].ColumnName + ")")[0];
-                var maxRow = prnT.Select(prnT.Columns[0].ColumnName+ " = MAX("+ prnT.Columns[0].ColumnName +")")[0];
+                var minRow = _prnT.Select(_prnT.Columns[0].ColumnName + " = MIN(" + _prnT.Columns[0].ColumnName + ")")[0];
+                var maxRow = _prnT.Select(_prnT.Columns[0].ColumnName+ " = MAX("+ _prnT.Columns[0].ColumnName +")")[0];
                 Endwert.Text = Convert.ToString(maxRow[0]);
                 Anfangswert.Text = Convert.ToString( minRow[0]);
             }
@@ -76,7 +71,7 @@ namespace Diagrammorama
         {
             if (_check)
             {
-                _charty.charterinos.Add(new PlotModel());
+                _charty.Charterinos.Add(new PlotModel());
                 var charterini = _charty.CharlesCharteten;
                 //Überschrift übernehmen
                 _charty.WhatsMyName = upperschrift.Text;
@@ -160,7 +155,7 @@ namespace Diagrammorama
             if (sfd.FileName != "")
             {
                 var fs = sfd.FileName ;
-                prnT.ExportToExcel(fs);
+                _prnT.ExportToExcel(fs);
             }
         }
     }
