@@ -41,6 +41,8 @@
             this.LB_Y = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.XTitle = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Endwert = new System.Windows.Forms.TextBox();
@@ -69,8 +71,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.upperschrift = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.XTitle = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.ToExcel = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Graphen.SuspendLayout();
@@ -238,6 +239,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Wertebereich";
             // 
+            // XTitle
+            // 
+            this.XTitle.Location = new System.Drawing.Point(7, 152);
+            this.XTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.XTitle.Name = "XTitle";
+            this.XTitle.Size = new System.Drawing.Size(120, 22);
+            this.XTitle.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 132);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 17);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Achsen Bezeichnung";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -285,6 +303,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ToExcel);
             this.tabPage1.Controls.Add(this.Anzeige);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -305,7 +324,7 @@
             this.Anzeige.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Anzeige.Name = "Anzeige";
             this.Anzeige.RowTemplate.Height = 24;
-            this.Anzeige.Size = new System.Drawing.Size(739, 450);
+            this.Anzeige.Size = new System.Drawing.Size(739, 424);
             this.Anzeige.TabIndex = 2;
             // 
             // tabControl1
@@ -531,22 +550,15 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Überschrift";
             // 
-            // XTitle
+            // ToExcel
             // 
-            this.XTitle.Location = new System.Drawing.Point(7, 152);
-            this.XTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.XTitle.Name = "XTitle";
-            this.XTitle.Size = new System.Drawing.Size(120, 22);
-            this.XTitle.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 132);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 17);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Achsen Bezeichnung";
+            this.ToExcel.Location = new System.Drawing.Point(6, 435);
+            this.ToExcel.Name = "ToExcel";
+            this.ToExcel.Size = new System.Drawing.Size(144, 23);
+            this.ToExcel.TabIndex = 3;
+            this.ToExcel.Text = "Tabelle Speichern";
+            this.ToExcel.UseVisualStyleBackColor = true;
+            this.ToExcel.Click += new System.EventHandler(this.ToExcel_Click);
             // 
             // Form1
             // 
@@ -628,6 +640,7 @@
         private System.Windows.Forms.Panel Legendenposition;
         private System.Windows.Forms.TextBox XTitle;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button ToExcel;
     }
 }
 

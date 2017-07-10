@@ -60,3 +60,5 @@ C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\obj\Debug\Diagramm
 C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.application
 C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.exe
 C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.pdb
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\obj\Debug\Interop.Office.dll
+C:\Users\Ich\Documents\UNI\Arbeit\Diagrammorama\Diagrammorama\obj\Debug\Diagrammorama.csproj.ResolveComReference.cache

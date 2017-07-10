@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.IO;
 using OxyPlot;
 using OxyPlot.Axes;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Diagrammorama
 {
     public partial class Form1 : Form
     {
+        private DataTable prnT;
         private bool _check = false;
         private ChartySheen _charty;
         private PrnReader _prn;
@@ -31,7 +35,7 @@ namespace Diagrammorama
                 Dateipfad.Text = file;
                 //ein objekt der PRN_Reader Klasse wird erzeugt und der Dateipfad übergeben
                 _prn = new PrnReader(file);
-                DataTable prnT = _prn.Tabelle();
+                prnT = _prn.Tabelle();
                 Anzeige.DataSource = prnT;
                 //ein neues Objekt der ChartySheen Klasse wird erzeugt und die Datenquelle übergeben
                 _charty = new ChartySheen(prnT);
@@ -44,7 +48,7 @@ namespace Diagrammorama
             }
 
         }
-        //die auswahl boxen werden mit iformationen versorgt
+        //die auswahl boxen werden mit informationen versorgt
         private void Lb(DataTable val)
         {
             for (int i = 0; i < val.Columns.Count; i++)
@@ -145,6 +149,19 @@ namespace Diagrammorama
         private void GraphNeu_Click(object sender, EventArgs e)
         {
             LB_G.Items[LB_G.SelectedIndex]= graph_neu.Text;
+        }
+
+        private void ToExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel-Arbeitsmappe|*.xlsx;";
+            sfd.Title = "Tabelle Speichern";
+            sfd.ShowDialog();
+            if (sfd.FileName != "")
+            {
+                var fs = sfd.FileName ;
+                prnT.ExportToExcel(fs);
+            }
         }
     }
 }
