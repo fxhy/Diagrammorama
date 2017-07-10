@@ -21,7 +21,6 @@ namespace Diagrammorama
         public string WhatsMyName;
         public string Sub;
         public string Axel;
-
         public string XAchse;
         public List<string> YAchse=new List<string>();
         public DataTable Tabelle;
