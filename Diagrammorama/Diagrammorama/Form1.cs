@@ -29,17 +29,22 @@ namespace Diagrammorama
                 string file = ofd.FileName;
                 Dateipfad.Text = file;
                 //ein objekt der PRN_Reader Klasse wird erzeugt und der Dateipfad übergeben
-                _prn = new PrnReader(file);
+                if (_prn==null)
+                {
+                    _prn = new PrnReader();
+                }
+                _prn.tb++;
+                _prn._dp = file;
                 _prnT = _prn.Tabelle();
                 Anzeige.DataSource = _prnT;
                 //ein neues Objekt der ChartySheen Klasse wird erzeugt und die Datenquelle übergeben
                 _charty = new ChartySheen(_prnT);
                 Lb(_prnT);
                 
-                var minRow = _prnT.Select(_prnT.Columns[0].ColumnName + " = MIN(" + _prnT.Columns[0].ColumnName + ")")[0];
+                /*var minRow = _prnT.Select(_prnT.Columns[0].ColumnName + " = MIN(" + _prnT.Columns[0].ColumnName + ")")[0];
                 var maxRow = _prnT.Select(_prnT.Columns[0].ColumnName+ " = MAX("+ _prnT.Columns[0].ColumnName +")")[0];
                 Endwert.Text = Convert.ToString(maxRow[0]);
-                Anfangswert.Text = Convert.ToString( minRow[0]);
+                Anfangswert.Text = Convert.ToString( minRow[0]);*/
             }
 
         }

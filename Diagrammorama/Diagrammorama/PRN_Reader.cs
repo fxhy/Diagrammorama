@@ -9,26 +9,23 @@ namespace Diagrammorama
     public class PrnReader
     {
         public List<string> WhatsMyName = new List<string>();
-        private readonly string _dp;
-        public PrnReader(string path)
+        public string _dp;
+        DataTable tabi = new DataTable();
+        public int tb;
+        public PrnReader()
         {
-            _dp = path;
         }
         public DataTable Tabelle()
         {
             DataTable result = new DataTable();
             string[] lineArray = File.ReadAllLines(_dp);
             char[] seperatingChars = { ' ', '#' };
-
             string[] columns = lineArray[0].Split(seperatingChars, StringSplitOptions.RemoveEmptyEntries);
             foreach (string columnName in columns)
             {
-                WhatsMyName.Add(columnName);
-                result.Columns.Add(new DataColumn(columnName, typeof(double)));
+                WhatsMyName.Add(columnName + " tb" + tb);
+                result.Columns.Add(new DataColumn(columnName + " tb" + tb, typeof(double)));
             }
-
-
-
 
             for (int i = 1; i < lineArray.Length; i++)
             {
@@ -40,7 +37,8 @@ namespace Diagrammorama
                 }
                 result.Rows.Add(dr);
             }
-            return result;
+            tabi.Merge(result);
+            return tabi;
         }
     }
 }
