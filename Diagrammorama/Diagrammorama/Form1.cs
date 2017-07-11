@@ -46,16 +46,16 @@ namespace Diagrammorama
         //die auswahl boxen werden mit informationen versorgt
         private void Lb(DataTable val)
         {
-            for (int i = 0; i < val.Columns.Count; i++)
+            for (int i = 0; i < _prn.WhatsMyName.Count; i++)
             {
                 
-                LB_X.Items.Add(val.Columns[i].ColumnName);
-                LB_X.SelectedIndex = 0;
-                LB_Y.Items.Add(val.Columns[i].ColumnName);
+                LB_X.Items.Add(_prn.WhatsMyName[i]);
+                LB_Y.Items.Add(_prn.WhatsMyName[i]);
                 LB_Y.SetItemChecked(i, true);
-                LB_G.Items.Add(val.Columns[i].ColumnName);
+                LB_G.Items.Add(_prn.WhatsMyName[i]);
 
             }
+            LB_X.SelectedIndex = 0;
         }
         //auswahl der Datenquelle für die x-Achse
         private void LB_X_SelectedIndexChanged(object sender, EventArgs e)

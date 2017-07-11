@@ -8,6 +8,7 @@ namespace Diagrammorama
 {
     public class PrnReader
     {
+        public List<string> WhatsMyName = new List<string>();
         private readonly string _dp;
         public PrnReader(string path)
         {
@@ -22,6 +23,7 @@ namespace Diagrammorama
             string[] columns = lineArray[0].Split(seperatingChars, StringSplitOptions.RemoveEmptyEntries);
             foreach (string columnName in columns)
             {
+                WhatsMyName.Add(columnName);
                 result.Columns.Add(new DataColumn(columnName, typeof(double)));
             }
 
